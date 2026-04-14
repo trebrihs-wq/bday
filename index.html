@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>para lamang to sayo 🐱</title>
+
+    <style>
+          .cat-container {
+          margin-top: 60px;
+          animation: bounce 0.5s infinite;
+      }
+
+      .cat-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #f9a8d4;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      }
+        .cat-img::before {
+      content: "🐱";
+      }
+        body {
+            background: linear-gradient(135deg, #fdf2f8, #e0e7ff);
+            font-family: 'Courier New', monospace;
+            text-align: center;
+            padding: 20px;
+            color: #374151;
+        }
+
+        /* Bouncing cat */
+        .cat {
+            font-size: 150px;
+            animation: bounce 0.5s infinite;
+            margin-top: 60px;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            60% { transform: translateY(-10px); }
+        }
+
+        /* Envelope */
+        .envelope {
+            margin: 50px auto;
+            width: 200px;
+            height: 120px;
+            background: #f9a8d4;
+            border-radius: 10px;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .envelope:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-left: 100px solid transparent;
+            border-right: 100px solid transparent;
+            border-bottom: 60px solid #f472b6;
+        }
+
+        /* Letter */
+        #letter {
+            display: none;
+            margin-top: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            line-height: 1.8;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            color: #f472b6;
+        }
+
+        button {
+            padding: 12px 25px;
+            background: #f9a8d4;
+            border: none;
+            border-radius: 12px;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background: #f472b6;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="cat-container">
+    <img src="herphoto.jpg" class="cat-img">
+</div>
+
+<h3>Tap the letter 💌</h3>
+
+<div class="envelope" onclick="openLetter()"></div>
+
+<div id="letter">
+    <h1>🐱 SURPRESA 🎉</h1>
+
+    <p>
+        Happy Birthday!<strong></strong><br>
+        Kani ra jud akohang afford nga gift kay kapos na kapos na talaga 😆<br><br>
+        LAHAMS KITA NG SOBRA!
+        thankyou sa imoha pag-understand sa akohang pagkaghoster kay mawala ra jud kog kalit in the middle of our conversation, but still wala kay reklamo.<br><br>
+        If only you knew how much I appreciate and how interested I am sa imong long long chikaaaaa permi 🥹
+        and I’m sooo proud and happy sa imohang journey and mga experiences na gina-share nimo permi sa akoha.<br><br>
+
+        Keep smiling, barinat! 
+        And know that I’m always here even if mag glitch-glitch ko hehe <br><br>
+
+        mwa! 💋 HBD HBD 🎂🎉💖
+    </p>
+
+    <button onclick="showFinal()">click me ug ganahan ka ma cringe 🐾</button>
+
+    <h3 id="final" style="display:none; margin-top:20px;">
+         will forever be your sebG :) 🐱
+    </h3>
+</div>
+
+<script>
+function openLetter() {
+    document.querySelector(".envelope").style.display = "none";
+    document.querySelector("h3").style.display = "none";
+    document.getElementById("letter").style.display = "block";
+}
+
+function showFinal() {
+    document.getElementById("final").style.display = "block";
+}
+</script>
+
+</body>
+</html>
